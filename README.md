@@ -39,7 +39,10 @@ Colunas a mais na tabela não tem problema, por exemplo adicionar uma 'category'
 Retorna todas as pessoas cadastradas.<br>
 Dica: atenção com o nome da propriedade createdAt! Ela deve vir em camelCase, apesar de estar em snake_case no banco de dados.
 ```typescript
+// Request
 // GET /users
+
+// Response
 // status 200 OK
 [
     {
@@ -62,7 +65,17 @@ Dica: atenção com o nome da propriedade createdAt! Ela deve vir em camelCase, 
 ## Create user
 Cadastra uma nova pessoa.
 ```typescript
+// Request
 // POST /users
+// body JSON
+{
+    "id": "u003",
+    "name": "Astrodev",
+    "email": "astrodev@email.com",
+    "password": "astrodev00"
+}
+
+// Response
 // status 201 CREATED
 {
     message: "Cadastro realizado com sucesso"
@@ -71,6 +84,14 @@ Cadastra uma nova pessoa.
 
 ## Get all products
 Retorna todos os produtos cadastrados.
+```typescript
+// Request
+// GET /products
+
+// Response
+// status 200 OK
+
+```
 
 ## Create product
 Cadastra um novo produto.
