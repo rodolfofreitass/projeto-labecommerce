@@ -61,6 +61,13 @@ Dica: atenção com o nome da propriedade createdAt! Ela deve vir em camelCase, 
 
 ## Create user
 Cadastra uma nova pessoa.
+```typescript
+// POST /users
+// status 201 CREATED
+{
+    message: "Cadastro realizado com sucesso"
+}
+```
 
 ## Get all products
 Retorna todos os produtos cadastrados.
