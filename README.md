@@ -32,6 +32,26 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 
 ## Get all users
 Retorna todas as pessoas cadastradas.
+```typescript
+// GET /users
+// status 200 OK
+[
+    {
+        id: "u001",
+        name: "Fulano",
+        email: "fulano@email.com",
+        password: "fulano123",
+        createdAt: "2023-01-15 09:12:42"
+    },
+    {
+        id: "u002",
+        name: "Ciclana",
+        email: "ciclana@email.com",
+        password: "ciclana99",
+        createdAt: "2023-01-17 12:35:28"
+    }
+]
+```
 
 ## Create user
 Cadastra uma nova pessoa.
