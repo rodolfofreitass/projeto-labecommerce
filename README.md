@@ -12,13 +12,11 @@ Ele tem uma particularidade: seus requisitos são implementados ao longo dos exe
 - Knex
 - Postman
 
-# Requisitos
-
-## Banco de dados
+# Banco de dados
 ![image](https://user-images.githubusercontent.com/29845719/214396608-ddcfd097-e615-44f9-acbe-f815f9abb83f.png)
 https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 
-## Lista de requisitos
+# Lista de requisitos
 
 - Endpoints
 
@@ -26,24 +24,35 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
     - [ ]  Create user
     - [ ]  Get all products
     - [ ]  Create product
+    - [ ]  Search product by name
+    - [ ]  Edit product by id
     - [ ]  Create purchase
-    - [ ]  Add product to purchase by ids
+    - [ ]  Delete purchase by id
     - [ ]  Get purchase by id
 
-### Get all users
+## Get all users
 Retorna todas as pessoas cadastradas.
 
-### Create user
+## Create user
 Cadastra uma nova pessoa.
 
-### Get all products
+## Get all products
 Retorna todos os produtos cadastrados.
 
-### Create product
+## Create product
 Cadastra um novo produto.
 
-### Add product to purchase by ids
-Cadastra um produto em um pedido.
+## Search product by name
+Retorna o resultado da busca de produtos por nome.
 
-### Get purchase by id
+## Edit product by id
+Edita um produto existente.
+
+## Create purchase
+Cadastra um novo pedido.
+
+## Delete purchase by id
+Deleta um pedido existente.
+
+## Get purchase by id
 Retorna os dados de uma compra, incluindo a lista de produtos da mesma.
