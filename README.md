@@ -31,7 +31,8 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
     - [ ]  Get purchase by id
 
 ## Get all users
-Retorna todas as pessoas cadastradas.
+Retorna todas as pessoas cadastradas.<br>
+Dica: atenção com o nome da propriedade createdAt! Ela deve vir em camelCase, apesar de estar em snake_case no banco de dados.
 ```typescript
 // GET /users
 // status 200 OK
