@@ -21,10 +21,29 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 ## Lista de requisitos
 
 - Endpoints
+
     - [ ]  Get all users
     - [ ]  Create user
     - [ ]  Get all products
     - [ ]  Create product
     - [ ]  Create purchase
-    - [ ]  Get user purchase by id
+    - [ ]  Add product to purchase by ids
     - [ ]  Get purchase by id
+
+### Get all users
+Retorna todas as pessoas cadastradas.
+
+### Create user
+Cadastra uma nova pessoa.
+
+### Get all products
+Retorna todos os produtos cadastrados.
+
+### Create product
+Cadastra um novo produto.
+
+### Add product to purchase by ids
+Cadastra um produto em um pedido.
+
+### Get purchase by id
+Retorna os dados de uma compra, incluindo a lista de produtos da mesma.
