@@ -33,7 +33,7 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 # Exemplos de requisição
 Não precisa cadastrar o mesmo nome, email e quaisquer outros valores vistos aqui nos exemplos de saída. Porém, lembre-se de respeitar a estrutura pedida no banco de dados (nome das tabelas e colunas) e os nomes das propriedades na resposta da API.
 
-Colunas a mais na tabela não tem problema, por exemplo adicionar uma 'category' dentro da tabela 'products', mas a falta de uma coluna será considerada falha de implementação!
+Colunas a mais na tabela não tem problema, por exemplo adicionar uma 'category' dentro da tabela 'products', mas a falta de uma coluna ou propriedade na resposta será considerada falha de implementação!
 
 ## Get all users
 Retorna todas as pessoas cadastradas.<br>
