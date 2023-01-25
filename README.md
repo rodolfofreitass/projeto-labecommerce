@@ -23,8 +23,8 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
     - [ ]  Get all users
     - [ ]  Create user
     - [ ]  Create product
-    - [ ]  Get all products v1
-    - [ ]  Get all products v2
+    - [ ]  Get all products funcionalidade 1
+    - [ ]  Get all products funcionalidade 2
     - [ ]  Edit product by id
     - [ ]  Create purchase
     - [ ]  Delete purchase by id
@@ -103,7 +103,7 @@ Cadastra um novo produto.
 }
 ```
 
-## Get all products v1
+## Get all products funcionalidade 1
 Retorna todos os produtos cadastrados.
 ```typescript
 // Request
@@ -136,7 +136,7 @@ Retorna todos os produtos cadastrados.
 ]
 ```
 
-## Get all products v2
+## Get all products funcionalidade 2
 Caso seja enviada uma query params (q) deve ser retornado o resultado da busca de produtos por nome.
 ```typescript
 // Request
