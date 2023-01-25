@@ -22,9 +22,9 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 
     - [ ]  Get all users
     - [ ]  Create user
-    - [ ]  Get all products
     - [ ]  Create product
-    - [ ]  Search product by name
+    - [ ]  Get all products v1
+    - [ ]  Get all products v2
     - [ ]  Edit product by id
     - [ ]  Create purchase
     - [ ]  Delete purchase by id
@@ -82,32 +82,6 @@ Cadastra uma nova pessoa.
 }
 ```
 
-## Get all products
-Retorna todos os produtos cadastrados.
-```typescript
-// Request
-// GET /products
-
-// Response
-// status 200 OK
-[
-    {
-        id: "prod001",
-        name: "Mouse gamer",
-        price: 250,
-        description: "Melhor mouse do mercado!",
-        imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400"
-    },
-    {
-        id: "prod002",
-        name: "Monitor",
-        price: 900,
-        description: "Monitor LED Full HD 24 polegadas",
-        imageUrl: "https://picsum.photos/seed/Monitor/400"
-    }
-]
-```
-
 ## Create product
 Cadastra um novo produto.
 ```typescript
@@ -129,13 +103,45 @@ Cadastra um novo produto.
 }
 ```
 
-## Search product by name
-Retorna o resultado da busca de produtos por nome.
+## Get all products v1
+Retorna todos os produtos cadastrados.
+```typescript
+// Request
+// GET /products
+
+// Response
+// status 200 OK
+[
+    {
+        id: "prod001",
+        name: "Mouse gamer",
+        price: 250,
+        description: "Melhor mouse do mercado!",
+        imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400"
+    },
+    {
+        id: "prod002",
+        name: "Monitor",
+        price: 900,
+        description: "Monitor LED Full HD 24 polegadas",
+        imageUrl: "https://picsum.photos/seed/Monitor/400"
+    },
+    {
+        id: "prod003",
+        name: "Teclado gamer",
+        price: 200,
+        description: "Teclado mecânico com numpad",
+        imageUrl: "https://picsum.photos/seed/Teclado%20gamer/400"
+    }
+]
+```
+
+## Get all products v2
+Caso seja enviada uma query params (q) deve ser retornado o resultado da busca de produtos por nome.
 ```typescript
 // Request
 // query params = q
-
-// GET /products/search?q=gamer
+// GET /products?q=gamer
 
 // Response
 // status 200 OK
