@@ -90,23 +90,183 @@ Retorna todos os produtos cadastrados.
 
 // Response
 // status 200 OK
-
+[
+    {
+        id: "prod001",
+        name: "Mouse gamer",
+        price: 250,
+        description: "Melhor mouse do mercado!",
+        imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400"
+    },
+    {
+        id: "prod002",
+        name: "Monitor",
+        price: 900,
+        description: "Monitor LED Full HD 24 polegadas",
+        imageUrl: "https://picsum.photos/seed/Monitor/400"
+    }
+]
 ```
 
 ## Create product
 Cadastra um novo produto.
+```typescript
+// Request
+// POST /products
+// body JSON
+{
+    id: "prod003",
+    name: "Teclado gamer",
+    price: 200,
+    description: "Teclado mecânico com numpad",
+    imageUrl: "https://picsum.photos/seed/Teclado%20gamer/400"
+}
+
+// Response
+// status 201 CREATED
+{
+    message: "Produto cadastrado com sucesso"
+}
+```
 
 ## Search product by name
 Retorna o resultado da busca de produtos por nome.
+```typescript
+// Request
+// query params = q
+
+// GET /products/search?q=gamer
+
+// Response
+// status 200 OK
+[
+    {
+        id: "prod001",
+        name: "Mouse gamer",
+        price: 250,
+        description: "Melhor mouse do mercado!",
+        imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400"
+    },
+    {
+        id: "prod003",
+        name: "Teclado gamer",
+        price: 200,
+        description: "Teclado mecânico com numpad",
+        imageUrl: "https://picsum.photos/seed/Teclado%20gamer/400"
+    }
+]
+```
 
 ## Edit product by id
 Edita um produto existente.
+```typescript
+// Request
+// path params = :id
+
+// PUT /products/prod003
+// body JSON
+{
+    id: "prod0033",
+    name: "Teclado gamer RGB",
+    price: 300,
+    description: "Teclado mecânico com RGB e numpad",
+    imageUrl: "https://picsum.photos/seed/Teclado%20gamer%20RGB/400"
+}
+
+// Response
+// status 200 OK
+{
+    message: "Produto atualizado com sucesso"
+}
+```
 
 ## Create purchase
 Cadastra um novo pedido.
+```typescript
+// Request
+// POST /purchases
+// body JSON
+{
+    id: "pur001",
+    buyer: "u001",
+    totalPrice: 1400,
+    createdAt: "2023-01-15 16:24:54",
+    paid: 0,
+    products: [
+        {
+            id: "prod001",
+            name: "Mouse gamer",
+            price: 250,
+            description: "Melhor mouse do mercado!",
+            imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400",
+            quantity: 2
+        },
+        {
+            id: "prod002",
+            name: "Monitor",
+            price: 900,
+            description: "Monitor LED Full HD 24 polegadas",
+            imageUrl: "https://picsum.photos/seed/Monitor/400",
+            quantity: 1
+        }
+    ]
+}
+
+// Response
+// status 201 CREATED
+{
+    message: "Pedido realizado com sucesso"
+}
+```
 
 ## Delete purchase by id
 Deleta um pedido existente.
+```typescript
+// Request
+// path params = :id
+// DELETE /purchases/pur002
+
+// Response
+// status 200 OK
+{
+    message: "Pedido cancelado com sucesso"
+}
+```
 
 ## Get purchase by id
 Retorna os dados de uma compra, incluindo a lista de produtos da mesma.
+```typescript
+// Request
+// path params = :id
+// GET /purchases/pur001
+
+// Response
+// status 200 OK
+{
+    purchaseId: "pur001",
+    buyerId: "u001",
+    buyerName: "Fulano",
+    buyerEmail: "fulano@email.com",
+    totalPrice: 1400,
+    createdAt: "2023-01-15 16:24:54",
+    paid: 0,
+    products: [
+        {
+            id: "prod001",
+            name: "Mouse gamer",
+            price: 250,
+            description: "Melhor mouse do mercado!",
+            imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400",
+            quantity: 2
+        },
+        {
+            id: "prod002",
+            name: "Monitor",
+            price: 900,
+            description: "Monitor LED Full HD 24 polegadas",
+            imageUrl: "https://picsum.photos/seed/Monitor/400",
+            quantity: 1
+        }
+    ]
+}
+```
