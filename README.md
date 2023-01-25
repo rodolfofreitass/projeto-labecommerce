@@ -196,8 +196,6 @@ Cadastra um novo pedido.
     id: "pur001",
     buyer: "u001",
     totalPrice: 1400,
-    createdAt: "2023-01-15 16:24:54",
-    paid: 0,
     products: [
         {
             id: "prod001",
