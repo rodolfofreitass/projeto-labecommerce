@@ -89,11 +89,11 @@ Cadastra um novo produto.
 // POST /products
 // body JSON
 {
-    id: "prod003",
-    name: "Teclado gamer",
-    price: 200,
-    description: "Teclado mecânico com numpad",
-    imageUrl: "https://picsum.photos/seed/Teclado%20gamer/400"
+    "id": "prod003",
+    "name": "Teclado gamer",
+    "price": 200,
+    "description": "Teclado mecânico com numpad",
+    "imageUrl": "https://picsum.photos/seed/Teclado%20gamer/400"
 }
 
 // Response
@@ -172,11 +172,11 @@ Edita um produto existente.
 // PUT /products/prod003
 // body JSON
 {
-    id: "prod0033",
-    name: "Teclado gamer RGB",
-    price: 300,
-    description: "Teclado mecânico com RGB e numpad",
-    imageUrl: "https://picsum.photos/seed/Teclado%20gamer%20RGB/400"
+    "id": "prod0033",
+    "name": "Teclado gamer RGB",
+    "price": 300,
+    "description": "Teclado mecânico com RGB e numpad",
+    "imageUrl": "https://picsum.photos/seed/Teclado%20gamer%20RGB/400"
 }
 
 // Response
@@ -193,25 +193,25 @@ Cadastra um novo pedido.
 // POST /purchases
 // body JSON
 {
-    id: "pur001",
-    buyer: "u001",
-    totalPrice: 1400,
-    products: [
+    "id": "pur001",
+    "buyer": "u001",
+    "totalPrice": 1400,
+    "products": [
         {
-            id: "prod001",
-            name: "Mouse gamer",
-            price: 250,
-            description: "Melhor mouse do mercado!",
-            imageUrl: "https://picsum.photos/seed/Mouse%20gamer/400",
-            quantity: 2
+            "id": "prod001",
+            "name": "Mouse gamer",
+            "price": 250,
+            "description": "Melhor mouse do mercado!",
+            "imageUrl": "https://picsum.photos/seed/Mouse%20gamer/400",
+            "quantity": 2
         },
         {
-            id: "prod002",
-            name: "Monitor",
-            price: 900,
-            description: "Monitor LED Full HD 24 polegadas",
-            imageUrl: "https://picsum.photos/seed/Monitor/400",
-            quantity: 1
+            "id": "prod002",
+            "name": "Monitor",
+            "price": 900,
+            "description": "Monitor LED Full HD 24 polegadas",
+            "imageUrl": "https://picsum.photos/seed/Monitor/400",
+            "quantity": 1
         }
     ]
 }
