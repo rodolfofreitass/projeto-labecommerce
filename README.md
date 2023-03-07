@@ -30,6 +30,10 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
     - [ ]  Delete purchase by id
     - [ ]  Get purchase by id
 
+- Documentação Postman
+
+- README.md
+
 # Exemplos de requisição
 Não precisa cadastrar o mesmo nome, email e quaisquer outros valores vistos aqui nos exemplos de saída. Porém, lembre-se de respeitar a estrutura pedida no banco de dados (nome das tabelas e colunas) e os nomes das propriedades na resposta da API.
 
