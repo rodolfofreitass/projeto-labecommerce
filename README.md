@@ -18,6 +18,8 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
 
 # Lista de requisitos
 
+- Documentação Postman de todos os endpoints (obrigatória para correção)
+
 - Endpoints
 
     - [ ]  Get all users
@@ -29,8 +31,6 @@ https://dbdiagram.io/d/63c6e8e5296d97641d7a4666
     - [ ]  Create purchase
     - [ ]  Delete purchase by id
     - [ ]  Get purchase by id
-
-- Documentação Postman
 
 - README.md
 
