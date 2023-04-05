@@ -2,7 +2,8 @@ export enum CATEGORYS {
     VGA = 'Placa de vídeo',
     POWER_SUPPLY = 'Fonte',
     RAM = 'Memória RAM',
-    CPU = 'Processador'
+    CPU = 'Processador',
+    MB = 'Placa-mãe'
 }
 
 export type TUser = {
