@@ -102,3 +102,96 @@ app.post('/purchases', (req: Request, res: Response) => {
     res.status(201).send("Compra realizada com sucesso")
 })
 
+//Busca de produtos pelo ID
+
+app.get('/products/:id', (req: Request, res: Response) => {
+    const id = req.params.id
+
+    const result = products.find((product)=>{
+        return product.id === id
+    })
+    res.status(200).send(result)
+})
+
+//Busca de compras do usuário pelo User ID
+
+app.get('/users/:id/purchases', (req: Request, res: Response) => {
+    const id = req.params.id
+
+    const result = purchases.filter((purchase)=>{
+        return purchase.userId === id
+    })
+    res.status(200).send(result)
+})
+
+// Deletar usuário pela ID
+
+app.delete('/users/:id', (req: Request, res: Response) =>{
+    const id = req.params.id
+
+    const indexToRemove = users.findIndex((user)=>{
+        return user.id === id
+    })
+
+    if(indexToRemove >= 0){
+        users.splice(indexToRemove,1)
+    }
+
+    res.status(200).send("User apagado com sucesso")
+})
+
+// Deletar produto pela ID
+
+app.delete('/products/:id', (req: Request, res: Response) =>{
+    const id = req.params.id
+
+    const indexToRemove = products.findIndex((product)=>{
+        return product.id === id
+    })
+
+    if(indexToRemove >= 0){
+        products.splice(indexToRemove,1)
+    }
+
+    res.status(200).send("Produto apagado com sucesso")
+})
+
+//Editar usuário pela ID
+
+app.put('/users/:id', (req: Request, res: Response) =>{
+    const id = req.params.id
+
+    const newEmail = req.body.email as string | undefined
+    const newPassword = req.body.password as string | undefined
+
+    const user = users.find((user)=>{
+        return user.id === id
+    })
+
+    if(user){
+        user.email = newEmail || user.email
+        user.password = newPassword || user.password
+    }
+    res.status(200).send("Cadastro atualizado com sucesso")
+})
+
+//Editar produto pela ID
+
+app.put('/products/:id', (req: Request, res: Response) =>{
+    const id = req.params.id
+
+    const newName = req.body.name as string | undefined
+    const newPrice = req.body.price as number | undefined
+    const newCategory = req.body.category as CATEGORYS | undefined
+
+    const product = products.find((product)=>{
+        return product.id === id
+    })
+
+    if(product){
+        product.name = newName || product.name
+        product.price = newPrice || product.price
+        product.category = newCategory || product.category
+    }
+    res.status(200).send("Produto atualizado com sucesso")
+})
