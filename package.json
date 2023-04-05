@@ -4,7 +4,8 @@
   "description": "criacao do labecommerce",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./build/index.js"
+    "start": "tsc && node ./build/index.js",
+    "dev": "ts-node-dev src/index.ts"
   },
   "keywords": [
     "labenu",
@@ -15,7 +16,14 @@
   "author": "Rodolfo Freitas",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
     "@types/node": "^18.14.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
   }
 }
