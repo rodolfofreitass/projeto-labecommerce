@@ -13,12 +13,12 @@ export const users: TUser[] = [
 
 export const products: TProduct[] = [
     {
-        id: 'placa001',
+        id: 'v001',
         name: 'RTX 4090',
         price: 10900,
         category: CATEGORYS.VGA
     }, {
-        id: 'fonte001',
+        id: 'f001',
         name: 'XPG 500W',
         price: 600,
         category: CATEGORYS.POWER_SUPPLY
@@ -28,17 +28,17 @@ export const products: TProduct[] = [
 export const purchases: TPurchase[] = [
     {
         userId: '001',
-        productId: 'placa001',
+        productId: 'v01',
         quantity: 2,
         totalPrice: 21800
     }, {
         userId: '002',
-        productId: 'fonte001',
+        productId: 'f001',
         quantity: 1,
         totalPrice: 600
     },{
         userId: '002',
-        productId: 'fonte001',
+        productId: 'f001',
         quantity: 3,
         totalPrice: 1800
     }
